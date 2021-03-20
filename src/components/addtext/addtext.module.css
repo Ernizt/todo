@@ -1,0 +1,52 @@
+.Container {
+    background-color: aqua;
+    margin: 0 auto;
+    width: 100%;
+
+
+}
+.TextFild  {
+    width: 95%;
+    margin: 0 auto;
+    display: block;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+.TextFild  input {
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 95%;
+    margin-left: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+
+}
+.ButtonStl   {
+    width: 95%;
+    margin: 0 auto;
+    display: block;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+.ButtonStl  button {
+    width: 95%;
+    margin-left: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    background-color:#B2287B ;
+    font-size: 15px;
+    color:white;
+    font-family: "Times New Roman";
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+

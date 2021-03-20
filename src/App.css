@@ -1,0 +1,8 @@
+.App {
+  width: 375px;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background: #bbb7b4;
+}
