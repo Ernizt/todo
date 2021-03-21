@@ -1,32 +1,35 @@
-import React, {useEffect, useState} from "react";
-import {JsonData} from "../../types/types";
+import React, {useEffect} from "react";
 import {getJsonData} from '../../redux/json-reduser'
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {AppStateType} from "../../redux/redux-store";
 
 
 export const JsonComponent = ():React.ReactElement => {
-       let [postData, setPost] = useState<JsonData>();
 
+        const  dispatch = useDispatch();
 
-    useEffect(()=> {
+    const postData = useSelector((state:AppStateType)=> { return state.post.posts; })
+       useEffect(()=> {
+           dispatch(getJsonData())
+       }, [dispatch])
+    console.log(postData)
 
-            getJsonData();
-
-        }
-    , [])
 
     return (
         <div>
-            <h2>Hello</h2>
+            <h2>Json</h2>
+
             {
-              /*  postData.map( post => {
-                    return (
-                        <div key={post.id}>
-                            {post.title}
-                        </div>
-                    )
-                })*/
+                postData.map(post => {
+                 return (
+                     <div key={post.id}>
+                        <h3>{post.title} h3</h3>
+                        <p>{post.body}p</p>
+                    </div>
+                 )
+                })
             }
+
         </div>
     )
 }
